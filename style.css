@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #000;
+  --bg-button: #3d3c42;
+  --primary-color: #fff;
+  --gradient: linear-gradient(to right, #7a0bc0, #ff00e4);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.container {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 1.25rem;
+  gap: 2.5rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  user-select: none;
+  color: var(--primary-color);
+  padding: 2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  gap: 2.5rem;
+}
+
+.inputbox {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 2.5rem;
+}
+
+.inputbox label {
+  position: relative;
+  top: -0.1rem;
+  left: 0.3rem;
+  color: var(--primary-color);
+}
+
+.inputbox input {
+  background-color: var(--bg-button);
+  color: var(--primary-color);
+  width: 100%;
+  border: none;
+  padding: 0.7rem;
+  outline: none;
+}
+
+.inputbox input:focus,
+.inputbox input:valid {
+  border: 2px solid;
+  border-image: var(--gradient);
+  border-image-slice: 1;
+  border-radius: 0.6rem;
+}
+
+.container #btn {
+  justify-self: center;
+  width: 5.2rem;
+  height: 2.6rem;
+  border: none;
+  outline: none;
+  background-image: var(--gradient);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+footer {
+  padding: 2rem;
+  color: var(--primary-color);
+}
